@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Recipe xmlns:tns="http://www.alexjedamenko.org/Recipe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.alexjedamenko.org/Recipe Recipe.xsd ">
+  <tns:recipe_medicament>Clonozepam</tns:recipe_medicament>
+  <tns:recipe_morning_dosage>2x100g</tns:recipe_morning_dosage>
+  <tns:recipe_day_dosage></tns:recipe_day_dosage>
+  <tns:recipe_evening_dosage></tns:recipe_evening_dosage>
+  <tns:Patients_idPatient>2</tns:Patients_idPatient>
+  <tns:Doctors_idDoctors>8</tns:Doctors_idDoctors>
+</tns:Recipe>

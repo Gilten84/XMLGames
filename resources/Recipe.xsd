@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.alexjedamenko.org/Recipe" 
+xmlns:tns="http://www.alexjedamenko.org/Recipe" elementFormDefault="qualified">
+
+    
+    <element name="Recipe" type = "tns:Recipe"/>
+    <!--private String idRecipes;
+	//private String recipe_medicament;
+	//private String recipe_morning_dosage;
+	//private String recipe_day_dosage;
+	//private String recipe_evening_dosage;
+	//private String Patients_idPatient;
+	//private String Doctors_idDoctors; -->
+	<!--^[A-ZĀČĒĢĪĶĻŅŌŖŠŪŽ][a-zāčēģīķļņōŗšūž]{1,19}(\ [a-zāčēģīķļņōŗšūž]{2,20})?$-->
+	<complexType name="Recipe">
+	<sequence>
+		<element name="recipe_medicament" type="tns:recipe_medicament_regex"/>
+		<element name="recipe_morning_dosage" type="tns:recipe_morning_dosage_regex"/>
+		<element name="recipe_day_dosage" type="tns:recipe_day_dosage_regex"/>
+		<element name="recipe_evening_dosage" type="tns:recipe_evening_dosage_regex"/>
+		<element name="Patients_idPatient" type="tns:Patients_idPatient_regex" />
+		<element name="Doctors_idDoctors" type="tns:Doctors_idDoctors_regex"/>		  
+	</sequence>				
+	</complexType>
+	
+	
+	<simpleType name="recipe_medicament_regex">
+		<restriction base="string">
+			<pattern value="[A-ZĀČĒĢĪĶĻŅŌŖŠŪŽ].{0,25}"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="recipe_morning_dosage_regex">
+		<restriction base="string">
+			<pattern value=".{0,20}"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="recipe_day_dosage_regex">
+		<restriction base="string">
+			<pattern value=".{0,20}"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="recipe_evening_dosage_regex">
+		<restriction base="string">
+			<pattern value=".{0,20}"/>			
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="Patients_idPatient_regex">
+		<restriction base="string">
+			<pattern value="[1-9][0-9]{0,9}"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="Doctors_idDoctors_regex">
+		<restriction base="string">
+			<pattern value="[1-9][0-9]{0,9}"/>
+		</restriction>
+	</simpleType>
+	
+
+	
+</schema>

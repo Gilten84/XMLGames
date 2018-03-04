@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table id="doctors" class="Doctor">
+    <column id="idDoctors">
+        <regex>*</regex>
+    </column>
+    <column id="doctor_last_name">
+        <regex>*</regex>
+    </column>
+     <column id="doctor_first_name">
+        <regex>*</regex>
+    </column>
+     <column id="doctor_id_code">
+        <regex>*</regex>
+    </column>
+</table>
